@@ -16,7 +16,18 @@ function generateMarkdown(data) {
   return `# Title 
 
 
- ${data.title}
+ ${data.descript}
  ##Description
+
+ ${data.contents}
+ ## Table of Contents
+
+ ${data.usage}
+ ## Usage
+
+ ${data.liscense}
+ ##Liscensing
+ `;
+}
 
 module.exports = generateMarkdown;
