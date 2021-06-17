@@ -13,6 +13,11 @@ const questions = [
       },
       {
         type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+      },
+      {
+        type: 'input',
         name: 'descript',
         message: 'What is the desrciption of your repository?',
       },
@@ -20,6 +25,16 @@ const questions = [
         type: 'input',
         name: 'contents',
         message: 'table of contents?',
+      },
+      {
+        type: 'input',
+        name: 'installation',
+        message: 'What command should be run to install dependencies?',
+      },
+      {
+        type: 'input',
+        name: 'test',
+        message: 'What command should be run to run tests?',
       },
       {
         type: 'input',
@@ -32,9 +47,15 @@ const questions = [
         message: 'contributors?',
       },
       {
+        type: 'input',
+        name: 'gitHub',
+        message: 'What is your github?',
+      },
+      {
         type: 'list',
         name: 'liscense',
-        choices: ['MIT', 'Apache', 'no liscense']
+        message: "What kind of license should your project have?"
+        choices: ['MIT', 'GLP', 'no liscense']
       },
 ];
 
