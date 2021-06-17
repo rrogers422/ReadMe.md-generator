@@ -2,7 +2,8 @@
 
 const inquirer = require("inquirer");
 const generateMarkdown = require('./utils/generateMarkdown');
-const fs = require('fs')
+const fs = require('fs');
+const path = require('path');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -10,6 +11,11 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'What is the title of your repository?',
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is your first and last name?',
       },
       {
         type: 'input',
@@ -54,7 +60,6 @@ const questions = [
       {
         type: 'list',
         name: 'liscense',
-        message: "What kind of license should your project have?"
         choices: ['MIT', 'GLP', 'no liscense']
       },
 ];
@@ -65,7 +70,6 @@ function writeToFile(fileName, data)  {
 }
 
 // TODO: Create a function to initialize app
-
 function init() {
   inquirer.prompt(questions)
   .then(answers => {

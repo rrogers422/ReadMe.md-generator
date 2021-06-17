@@ -76,6 +76,7 @@ GitHub: [${data.gitHub}](https://github.com/${data.gitHub}/) </br>
 Email: ${data.email}
 `;
 }
-}
+
+
 
 module.exports = generateMarkdown;
